@@ -70,7 +70,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null) // 처음엔 상품의 값이 있을 수 없으므로 null값
   const [loading, setLoading] = useState(false)
   const getProductDetail = async () => { // 클릭한 상품의 상세정보를 출력할 수 있게끔 하는 함수
-    let url = `http://localhost:3005/collaboration/${id}`;
+    let url = `https://my-json-server.typicode.com/adfdaf/React_ShoppingMall/collaboration/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data) // 클릭한 상품의 db.json정보들이 뜸
