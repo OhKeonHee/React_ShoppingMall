@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { styled } from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Container = styled.div`
   width: 100%;
@@ -64,6 +65,17 @@ const Button = styled.button`
     color: white;
   }
 `
+const A = styled.a`
+  display: flex;
+  gap: 20px;
+  color: #777;
+  cursor: pointer;
+  text-decoration: none;
+  &:focus {
+    text-decoration: underline;
+    color: black;
+  }
+`
 
 const ProductDetail = () => {
   let {id} = useParams(); //파라미터로 유동적으로 바뀌는 id값을 객체형태로 저장
@@ -80,6 +92,7 @@ const ProductDetail = () => {
   useEffect(() => {
     getProductDetail();
   }, []);
+
   const collaboList = [
     '전체보기',
     'ADER x CONVERSE',

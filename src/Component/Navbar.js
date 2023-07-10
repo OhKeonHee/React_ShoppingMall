@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown, faCartShopping, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
@@ -34,12 +34,13 @@ const Navbar = () => {
   const goToCollaboration = () => {
     navigate('/collaboration');
   }
+
+  const [userSearch, setUserSearch] = useState('');
   const search = (event) => {
-    if(event.key === "Enter") {
-      let keyword = event.target.value;
-      console.log('keyword', keyword)
-    }
+    setUserSearch(event.target.value.toLowerCase());
+    console.log(userSearch)
   }
+
   return (
       <Container className='nav-header'>
         <div className='nav-logo' onClick={() => goToHome()}>
@@ -88,7 +89,7 @@ const Navbar = () => {
         </div>
         <div className='search-box'>
           <FontAwesomeIcon icon={faSearch} />
-          <input type='text' placeholder='제품검색' onKeyPress={search}/>
+          <input type='text' placeholder='제품검색' onChange={search} userSearch={userSearch}/>
         </div>
         <div onClick={() => goToCart()}>
         <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: '20px', cursor: 'pointer' }} />

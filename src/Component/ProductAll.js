@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import Navbar from './Navbar';
 
 
-const ProductAll = () => {
+const ProductAll = ({ userSearch }) => {
   const [productList, setProductList] = useState([])
   const getProduct = async () => {
     let url = `https://my-json-server.typicode.com/adfdaf/React_ShoppingMall/collaboration`;
@@ -17,6 +18,9 @@ const ProductAll = () => {
   useEffect(() => {
     getProduct();
   }, []);
+
+  const searched = productList.filter((item) => item.title.toLowerCase().includes(userSearch));
+  
   return (
     <div style={{ marginTop: '160px' }}>
       <Container>

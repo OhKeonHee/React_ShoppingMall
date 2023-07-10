@@ -12,9 +12,9 @@ const ProductCard = ({ item }) => {
     <div className='card' onClick={showDetail}>
       <img src={item.img}/>
       <div>{item.title}</div>
-      <div>
-        {item.color}
-        {item.price}
+      <div style={{width: '100%', display:'flex', justifyContent:'space-between'}}>
+        <p>{item.color}</p>
+        <p>{item.price}</p>
       </div>
     </div>
   )

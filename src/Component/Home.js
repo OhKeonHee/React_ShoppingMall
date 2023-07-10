@@ -50,19 +50,19 @@ const Home = () => {
           ADER ERROR's Curve; Sabot<br />
           제품 바로 보기 &gt;
         </Span>
-        <Img className='homeImg_2' src='http://bbbtan.cafe24.com/upload/2023ss/snks/main-2.jpg' />
+        <Img className='homeImg_2' src='http://bbbtan.cafe24.com/upload/2023ss/snks/main-2.jpg' onClick={() => goToCollaboration()} />
         <Span className='home_span'>
           The 2nd drop of 23SS ‘Through Editism’ Collection<br />
           제품 바로 보기 &gt;
         </Span>
       </ImgBox>
       <ImgBox>
-        <Img className='homeImg_3' src='http://bbbtan.cafe24.com/upload/2023ss/snks/main-3.jpg' />
+        <Img className='homeImg_3' src='http://bbbtan.cafe24.com/upload/2023ss/snks/main-3.jpg' onClick={() => goToCollaboration()} />
         <Span first className='home_span'>
           NEW LINE ‘Significant<br />
           제품 바로 보기 &gt;
         </Span>
-        <Img className='homeImg_4' src='http://bbbtan.cafe24.com/upload/2023ss/snks/main-4.jpg' />
+        <Img className='homeImg_4' src='http://bbbtan.cafe24.com/upload/2023ss/snks/main-4.jpg' onClick={() => goToCollaboration()} />
         <Span className='home_span'>
           아더에러 콜라보레이션<br />
           제품 바로 보기 &gt;
